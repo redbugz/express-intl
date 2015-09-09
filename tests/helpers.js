@@ -49,12 +49,6 @@ before(function (done) {
     var res = {locals: {}};
     ExpressIntl.middleware(intlOptions)(req, res, function () {
         locals = res.locals;
-        console.log('req', req);
-        console.log('res', res);
-        console.log('locals', locals);
-        console.log(res.locals.intl.formatNumber(1234.5678));
-        console.log(res.locals.intl.formatNumber(1234.5678, 'currency', {currency: 'EUR'}));
-        console.log(res.locals.intl.formatNumber(1234.5678, 'currency', {currency: 'EUR', locales:'de-DE'}));
         done();
     });
 });
