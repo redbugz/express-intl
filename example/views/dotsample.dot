@@ -1,0 +1,10 @@
+<html>
+    <head>
+    </head>
+    <body>
+        number: {{=it.intl.formatNumber(1234)}}
+        number: {{=it.intl.formatNumber(1234, {locales: 'de-DE'})}}
+        json: <pre>{{=JSON.stringify(it, null, 2)}}</pre>
+        this: {{=JSON.stringify(it.intl)}}
+    </body>
+</html>

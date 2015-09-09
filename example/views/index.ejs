@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <strong>request locale:</strong> <%= intl.locales %> <br>
+        <strong>intl:</strong> <%= JSON.stringify(intl) %> <br>
+        <ul>
+            <li>number: <%= intl.formatNumber(40000.123) %></li>
+            <li>number (de): <%= intl.formatNumber(40000.123, {locales:'de-DE'}) %></li>
+            <li>currency: <%= intl.formatNumber(40000.12, 'currency', {currency: "EUR"}) %></li>
+            <li>currency (de): <%= intl.formatNumber(40000.12, 'currency', {currency: "EUR", locales:'de-DE'}) %></li>
+            <li>date: <%= intl.formatDate(new Date()) %></li>
+            <li>message: <%= intl.formatMessage('', {name:"Annie", numPhotos:1000, takenDate:Date.now() }) %></li>
+            <li>message: <%= intl.get('FROM', {num:45234.91 }) %></li>
+        </ul>
+    </body>
+</html>

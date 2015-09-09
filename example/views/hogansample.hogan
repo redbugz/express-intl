@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body>
+<div class="timeline">
+
+  <!-- load more button -->
+  <button>{{NUM}}</button>
+
+  <!-- intl object -->
+  {{#intl}}
+    {{intl.message("FROM")}}
+  {{/intl}}
+
+</div>
+    </body>
+</html>
