@@ -1,4 +1,4 @@
-/* global describe, before, it, expect, locale, Intl, IntlPolyfill, middleware, ExpressIntl */
+/* global describe, before, it, expect, locale, Intl, IntlPolyfill, ExpressIntl */
 /* jshint node:true, expr:true */
 
 'use strict';

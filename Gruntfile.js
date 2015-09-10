@@ -174,16 +174,6 @@ module.exports = function (grunt) {
                     browsers: [
                         {
                             browserName: 'internet explorer',
-                            platform: 'Windows XP',
-                            version: '7'
-                        },
-                        {
-                            browserName: 'internet explorer',
-                            platform: 'Windows 7',
-                            version: '8'
-                        },
-                        {
-                            browserName: 'internet explorer',
                             platform: 'Windows 7',
                             version: '9'
                         },
@@ -198,14 +188,29 @@ module.exports = function (grunt) {
                             version: '11'
                         },
                         {
+                            platform: "Windows 10",
+                            browserName: "microsoftedge",
+                            version: ''
+                        },
+                        {
                             browserName: 'chrome',
                             platform: 'Windows 7',
                             version: '37'
                         },
                         {
+                            browserName: 'chrome',
+                            platform: 'Windows 7',
+                            version: ''
+                        },
+                        {
                             browserName: 'firefox',
                             platform: 'Windows 7',
                             version: '32'
+                        },
+                        {
+                            browserName: 'firefox',
+                            platform: 'Windows 7',
+                            version: ''
                         },
                         {
                             browserName: 'iphone',

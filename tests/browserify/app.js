@@ -1,7 +1,7 @@
 /* global Express */
 'use strict';
 
-var ExpressIntl = require('../../');
+global.ExpressIntl = require('../../');
 require('../../lib/locales.js');
 
 var intl = ExpressIntl.init();
