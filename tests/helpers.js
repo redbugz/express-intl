@@ -45,7 +45,7 @@ before(function (done) {
     };
     intl = ExpressIntl.init(intlOptions);
 
-    var req = {query: {}, acceptedLanguages: ['en-US']};
+    var req = {query: {}, acceptsLanguages: function(){ return 'en-US' }};
     var res = {locals: {}};
     ExpressIntl.middleware(intlOptions)(req, res, function () {
         locals = res.locals;
