@@ -5,11 +5,14 @@ var express     = require('express'),
 
 var translations = {
     "en-US": {
-        "FROM": "from English request: {num, number, usd}"
+        "FROM": "from English request: {num, number, USD}"
     },
     "de-DE": {
-        "FROM": "from German request: {num, number, eur}"
+        "FROM": "from German request: {num, number, EUR}"
     },
+    "sv-SE": {
+      "FROM": "from Swedish request: {num, number, SEK}"
+    }
 };
 
 // These are our polyfills.
@@ -18,7 +21,8 @@ var areIntlLocalesSupported = require('intl-locales-supported');
 var localesMyAppSupports = [
     'en',
     'de',
-    'jp'
+    'jp',
+    'sv'
 ];
 
 if (global.Intl) {
@@ -40,20 +44,15 @@ if (global.Intl) {
 ExpressIntl = require('../index.js'); // require('express-intl');
 var intlOptions = {
     defaultLocale: "de-DE",
+    availableLocales: Object.keys(translations),
     formats: {
         number: {
             EUR: {style: 'currency', currency: 'EUR'},
-            USD: {style: 'currency', currency: 'USD'}
+            USD: {style: 'currency', currency: 'USD'},
+            SEK: {style: 'currency', currency: 'SEK'}
         }
     },
-    messages: {
-        "en-US": {
-            "FROM": "from English request: {num, number, usd}"
-        },
-        "de-DE": {
-            "FROM": "from German request: {num, number, eur}"
-        },
-    },
+    messages: translations,
 };
 
 app.engine('ejs', consolidate.ejs);

@@ -9,7 +9,8 @@
   ],
   "author": "Logan Allred <redbugz@gmail.com>",
   "contributors": [
-    "Logan Allred <redbugz@gmail.com>"
+    "Logan Allred <redbugz@gmail.com>",
+    "John Bäckström <john@johnphoto.se>"
   ],
   "bugs": {
     "url": "https://github.com/redbugz/express-intl/issues"

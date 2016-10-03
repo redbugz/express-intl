@@ -10,8 +10,6 @@ import IntlMessageFormat from 'intl-messageformat';
 import IntlRelativeFormat from 'intl-relativeformat';
 import createFormatCache from 'intl-format-cache';
 
-import {extend} from './utils.js';
-
 export {registerHelpers};
 
 // -----------------------------------------------------------------------------
@@ -23,7 +21,7 @@ var getRelativeFormat = createFormatCache(IntlRelativeFormat);
 
 
 function registerHelpers(options) {
-    var baseData = extend({}, options);
+    var baseData = Object.assign({}, options);
 
     var helpers = {
         get              : intlGet,
@@ -33,7 +31,7 @@ function registerHelpers(options) {
         formatNumber     : formatNumber,
         formatMessage    : formatMessage,
     };
-    return extend({}, baseData, helpers);
+    return Object.assign({}, baseData, helpers);
 
     // -- Helpers --------------------------------------------------------------
 
@@ -170,7 +168,7 @@ function registerHelpers(options) {
                 }
             }
         }
-        formatOptions = extend({}, formatOptions, options);
+        formatOptions = Object.assign({}, formatOptions, options);
 
         return formatOptions;
     }

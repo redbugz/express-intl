@@ -8,7 +8,7 @@
     "consolidate": "0.10.0",
     "dot": "^1.0.3",
     "ejs": "^2.3.3",
-    "express": "3.4.8",
+    "express": "4.x",
     "hogan.js": "^3.0.2",
     "intl": "~0.1.0",
     "intl-locales-supported": "^1.0.0",
