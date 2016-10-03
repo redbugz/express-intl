@@ -11,6 +11,7 @@ import IntlRelativeFormat from 'intl-relativeformat';
 
 import {registerHelpers} from './helpers.js';
 import defaultLocale from './en.js';
+import {extend} from './utils.js';
 
 export {init, middleware};
 
@@ -23,11 +24,11 @@ var defaults = {
 
 function init(options) {
   // initialize the helpers
-  return registerHelpers(Object.assign({}, defaults, options));
+  return registerHelpers(extend({}, defaults, options));
 }
 
 var middleware = function (options) {
-  var intl = Object.assign({}, defaults, options);
+  var intl = extend({}, defaults, options);
 
   // the actual express middleware function
   return function (req, res, next) {
