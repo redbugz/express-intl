@@ -34,7 +34,9 @@ var middleware = function (options) {
   return function (req, res, next) {
     // first calculate the correct currentLocale for the request from the list of available locales
     intl.currentLocale = req.acceptsLanguages(options.availableLocales) || defaults.defaultLocale;
-
+    if(Array.isArray(intl.currentLocale)){
+      intl.currentLocale = intl.currentLocale[0] || defaults.defaultLocale;
+    }
     if (intl.queryOverride) {
       if (req.query && req.query[intl.queryOverride]) {
         intl.currentLocale = req.query[intl.queryOverride];
